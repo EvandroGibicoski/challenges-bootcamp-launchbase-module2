@@ -6,5 +6,3 @@
      :rocket: challenges from bootcamp launchbase
 </h3>
 
-##
-**TECHS**
