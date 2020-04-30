@@ -14,7 +14,7 @@ body {
     background-color: var(--primary-color);
     font-family: 'Roboto', sans-serif;
 }
- /* === HEADER AND LINKS FROM HEADER === */
+ /* === HEADER AND CLASS: LINKS FROM HEADER === */
 header {
     background-color: rgb(236, 226, 226);
     width: 100%;
@@ -51,7 +51,7 @@ header {
     transition: width 500ms ease-in-out;
 }
 
-/* === CARD === */
+/* === CLASS: CARD === */
 
 .card {
     background-color: rgb(236, 226, 226);
@@ -73,7 +73,7 @@ header {
     }
 }
 
-/* === DETAILS === */
+/* === CLASS: DETAILS AND ITEM === */
 
 .details {
     padding: 32px;
@@ -114,4 +114,33 @@ header {
     font-weight: bold;
     text-transform: uppercase;
     font-size: 12px;
+}
+
+/* === FORM === */
+
+input, select {
+    width: 100%;
+    outline: none;
+    color: #555;
+    font-weight: bold;
+    font-size: 18px;
+}
+input[type="radio"], input[type="date"], select {
+    width: initial;
+    margin-right: 5px;
+}
+input::placeholder {
+    font-size: 12px;
+    font-weight: normal;
+    padding: 5px;
+}
+button[type="submit"] {
+    padding: 8px 16px;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    margin-top: 32px;
+    width: 100%;
+    color: #f0f8ff;
+    font-size: 16px;
+    font-weight: bold;
 }
