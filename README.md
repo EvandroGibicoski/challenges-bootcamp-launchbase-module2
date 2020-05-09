@@ -3,6 +3,6 @@
 </h1>
 
 <h3 align="center">
-     :rocket: challenges from bootcamp launchbase
+     :rocket: challenge from bootcamp launchbase
 </h3>
 
