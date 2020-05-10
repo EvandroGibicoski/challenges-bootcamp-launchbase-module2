@@ -19,4 +19,6 @@
 
 ## Resolução do desafio: 
 [layout.njk](https://github.com/EvandroGibicoski/challenges-bootcamp-launchbase-module3/blob/master/views/layout.njk)<br />
-[style.css](https://github.com/EvandroGibicoski/challenges-bootcamp-launchbase-module3/blob/master/public/style.css)
+[style.css](https://github.com/EvandroGibicoski/challenges-bootcamp-launchbase-module3/blob/master/public/style.css)<br />
+## Adicionando a Fonte Roboto dentro do porjeto:
+Acesse: [googlefonts](https://fonts.google.com/specimen/Roboto)
