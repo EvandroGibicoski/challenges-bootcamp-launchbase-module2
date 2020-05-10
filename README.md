@@ -19,4 +19,4 @@
 
 ## Resolução do desafio: 
 [layout.njk](https://github.com/EvandroGibicoski/challenges-bootcamp-launchbase-module3/blob/master/views/layout.njk)<br />
-[style.css](https://github.com/EvandroGibicoski/challenges-bootcamp-launchbase-module3/blob/master/views/layout.njk)
+[style.css](https://github.com/EvandroGibicoski/challenges-bootcamp-launchbase-module3/blob/master/public/style.css)
