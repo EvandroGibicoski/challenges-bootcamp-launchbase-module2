@@ -18,4 +18,5 @@
 - Utilize o `after` e o `transition` para aplicar um efeito visual nos links quando o mouse passar por cima.
 
 ## Resolução do desafio: 
-[layout.njk](https://github.com/EvandroGibicoski/challenges-bootcamp-launchbase-module3/blob/master/views/layout.njk)
+[layout.njk](https://github.com/EvandroGibicoski/challenges-bootcamp-launchbase-module3/blob/master/views/layout.njk)<br />
+[style.css](https://github.com/EvandroGibicoski/challenges-bootcamp-launchbase-module3/blob/master/views/layout.njk)
