@@ -11,7 +11,7 @@
 </h3>
 
 ## :rocket: Sobre o desafio:
-- Criar um `header` com dois links: `Teachers` e `Students`.
+- Criar um `header` com dois links: `Professores` e `Estudantes`.
 - Deve ser aplicado um `background`;
 - Deve ser utilizada a **fonte Roboto**;
 - Utilize o conceito de `box-sizing` e o seletor `+` para centralizar os seus links;
