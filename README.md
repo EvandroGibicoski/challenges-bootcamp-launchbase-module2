@@ -16,3 +16,5 @@
 - Deve ser utilizada a **fonte Roboto**;
 - Utilize o conceito de `box-sizing` e o seletor `+` para centralizar os seus links;
 - Utilize o `after` e o `transition` para aplicar um efeito visual nos links quando o mouse passar por cima.
+
+## Resolução do desafio: 
