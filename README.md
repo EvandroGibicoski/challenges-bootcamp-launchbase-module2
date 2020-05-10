@@ -9,6 +9,8 @@
 <h3 align="center">
   Desafio 4-1: Header
 </h3>
+
+## :rocket: Sobre o desafio:
 - Criar um `header` com dois links: `Teachers` e `Students`.
 - Deve ser aplicado um `background`;
 - Deve ser utilizada a **fonte Roboto**;
