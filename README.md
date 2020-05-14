@@ -6,3 +6,19 @@
      :rocket: challenge from bootcamp launchbase
 </h3>
 
+<h3 align="center">
+  Desafio 4-1: Header
+</h3>
+
+## :rocket: Sobre o desafio:
+- Criar um `header` com dois links: `Professores` e `Estudantes`.
+- Deve ser aplicado um `background`;
+- Deve ser utilizada a **fonte Roboto**;
+- Utilize o conceito de `box-sizing` e o seletor `+` para centralizar os seus links;
+- Utilize o `after` e o `transition` para aplicar um efeito visual nos links quando o mouse passar por cima.
+
+## Resolução do desafio: 
+[layout.njk](https://github.com/EvandroGibicoski/challenges-bootcamp-launchbase-module3/blob/master/views/layout.njk)<br />
+[style.css](https://github.com/EvandroGibicoski/challenges-bootcamp-launchbase-module3/blob/master/public/style.css)<br />
+## Adicionando a Fonte Roboto dentro do porjeto:
+Acesse: [google-fonts](https://fonts.google.com/specimen/Roboto)
