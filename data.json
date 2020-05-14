@@ -5,7 +5,7 @@
       "avatar_url": "https://github.com/settings/profile",
       "name": "Evandro ",
       "birth": 484444800000,
-      "degree": "Ensino Superior Completo",
+      "degree": "superior",
       "classes": "PRESENCIAL",
       "services": "Fisica, Matemática",
       "created_at": 1588985274259
@@ -15,7 +15,7 @@
       "avatar_url": "https://google.com",
       "name": "Evandro Pereira Gibicoski",
       "birth": 1588723200000,
-      "degree": "Ensino Superior Completo",
+      "degree": "superior",
       "classes": "À DISTÂNCIA",
       "services": "Matematica, historia. fisica",
       "created_at": 1588989247919
@@ -25,10 +25,50 @@
       "avatar_url": "https://github.com/settings/profile",
       "name": "Evandro Pereira Gibicoski",
       "birth": 476755200000,
-      "degree": "Ensino Superior Completo",
+      "degree": "superior",
       "classes": "À DISTÂNCIA",
       "services": "Matematica, historia, fisica",
       "created_at": 1589055586519
+    },
+    {
+      "id": 4,
+      "avatar_url": "https://github.com/settings/profile",
+      "name": "Evandro Pereira Gibicoski",
+      "birth": 496800000000,
+      "degree": "medio",
+      "classes": "PRESENCIAL",
+      "services": "Matematica, historia, fisica",
+      "created_at": 1589126844469
+    },
+    {
+      "id": 5,
+      "avatar_url": "https://github.com/settings/profile",
+      "name": "Carlos",
+      "birth": 476064000000,
+      "degree": "superior",
+      "classes": "PRESENCIAL",
+      "services": "Fisica",
+      "created_at": 1589127495552
+    },
+    {
+      "id": 6,
+      "avatar_url": "https://google.com/teste",
+      "name": "Evandro Gibicoski",
+      "birth": 511660800000,
+      "degree": "mestre",
+      "classes": "PRESENCIAL",
+      "services": "Fisica",
+      "created_at": 1589129741908
+    },
+    {
+      "id": 7,
+      "avatar_url": "https://github.com/settings/profile",
+      "name": "Evandro ",
+      "birth": 1589846400000,
+      "degree": "doutor",
+      "classes": "PRESENCIAL",
+      "services": "Matematica",
+      "created_at": 1589130610869
     }
   ]
 }
