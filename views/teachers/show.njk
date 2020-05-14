@@ -26,20 +26,14 @@
                 <div>Grau de Escolaridade</div>
                 <div>
                     <select id="options" name="degree">
-                        <option   value="Ensino Médio Completo" >Ensino Médio Completo</option>
-                        <option   value="Ensino Superior Completo">Ensino Superior Completo</option>
-                        <option   value="Mestrado">Mestrado</option>
-                        <option   value="Doutorado">Doutorado</option>
+                        <option   value="{{teacher.degree}}">{{teacher.degree}}</option>
                     </select>
                 </div>
             </div>
 
             <div class="item">
                 <div>Tipo de Aula</div>
-                <div>
-                    <span><input type="radio" name="classes" value="PRESENCIAL">PRESENCIAL</span>
-                    <span><input type="radio" name="classes" value="À DISTÂNCIA">À DISTÂNCIA</span>
-                </div>
+                <div>{{"PRESENCIAL" if teacher.classes == "PRESENCIAL" else "À DISTÂNCIA"}}</div>
             </div>
 
             <div class="item">
