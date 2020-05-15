@@ -1,6 +1,6 @@
 const fs = require('fs');
 const data = require('./data.json')
-const { age, graduation } = require('./utils')
+const { age, date, graduation } = require('./utils')
 
 exports.show = function(req, res) {
     const { id } = req.params;
@@ -56,3 +56,22 @@ exports.post = function(req, res) {
         return res.redirect("/teachers")
     });
 };
+
+exports.edit = function(req, res) {
+    const { id } = req.params;
+   
+    const foundTeacher = data.teachers.find(function(teacher) {
+            return teacher.id == id
+    });
+        if(!foundTeacher) 
+            return res.send("teacher not found");
+
+        const teacher = {
+            ...foundTeacher,
+            birth: date(foundTeacher.birth),
+            degree: graduation(foundTeacher.degree),
+            classes: foundTeacher.classes,
+
+        }
+            return res.render("teachers/edit", { teacher })
+}
