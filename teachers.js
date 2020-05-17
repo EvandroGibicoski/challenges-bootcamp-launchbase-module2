@@ -75,3 +75,7 @@ exports.edit = function(req, res) {
         }
             return res.render("teachers/edit", { teacher })
 }
+
+exports.put = function(req, res) {
+    return res.send("ok")
+}
