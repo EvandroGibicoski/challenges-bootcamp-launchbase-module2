@@ -17,7 +17,7 @@
 
   2 - Configurando o method-override dentro do html:
 
-  *Dentro da **tag**``form`` subscreve a rota ``action="/teachers?_method=PUT"``, **OBS:** ``?_method=PUT`` **é uma "string params"**
+  *Dentro da* **tag**``form`` *subscreve a rota* ``action="/teachers?_method=PUT"``, **OBS:** ``?_method=PUT`` **é uma "string params"**
 
 
 
