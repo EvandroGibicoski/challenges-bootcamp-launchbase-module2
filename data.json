@@ -1,11 +1,11 @@
 {
   "teachers": [
     {
-      "id": 1,
+      "id": "2",
       "avatar_url": "https://github.com/settings/profile",
       "name": "Evandro ",
       "birth": 484444800000,
-      "degree": "superior",
+      "degree": "Ensino Supeior Completo",
       "classes": "PRESENCIAL",
       "services": "Fisica, Matemática",
       "created_at": 1588985274259
