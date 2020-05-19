@@ -19,7 +19,7 @@
 
   *Dentro da **tag**``form`` subscreve a rota* ``action="/teachers?_method=PUT"``, **OBS: ``?_method=PUT`` é uma "query string"**.<br />
 
-  2 - Subscrevendo o verbo ``DELETE`` usando a **lib** method-override dentro do html:
+  3 - Subscrevendo o verbo ``DELETE`` usando a **lib** method-override dentro do html:
 
 *Dentro da **tag**``form`` subscreve a rota* ``action="/teachers?_method=DELETE"``, **OBS: ``?_method=DELETE`` é uma "query string"**.<br />
 
