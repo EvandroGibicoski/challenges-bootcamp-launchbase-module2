@@ -9,7 +9,7 @@
 <h3 align="center">
      Desafio 4-5
 </h3>
- 1 - Trabalahndo com o method-override dentro do projeto e subscrevendo o method post com o put:
+ 1 - Trabalhando com o method-override dentro do projeto e subscrevendo o method post ou get:
 
   *Instalando a **lib** method-override no projeto:* ``npm install method-override``<br />
   *Importando a **lib** para o arquivo server:* ``const methodOverride = require('method-override')``<br />
