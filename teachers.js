@@ -89,7 +89,7 @@ exports.put = function(req, res) {
     
 
     if(!foundTeacher)
-        return res.send("Teacher not found")
+        return res.send("Teacher not found!")
 
     const teacher = {
         ...foundTeacher,
@@ -102,7 +102,11 @@ exports.put = function(req, res) {
     fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err) {
         if(err)
             return res.send("Write file error!")
-            return res.redirect(`/teachers/${id}"`)
+            return res.redirect(`/teachers/${id}`)
 
     })
+}
+
+exports.delete = function(req, res) {
+    return res.send("ok")
 }

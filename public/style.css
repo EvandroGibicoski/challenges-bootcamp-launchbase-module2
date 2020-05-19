@@ -135,13 +135,24 @@ input::placeholder {
     padding: 5px;
 }
 button[type="submit"] {
-    padding: 8px 16px;
     background-color: var(--primary-color);
+    padding: 8px 16px;
     border-radius: 8px;
-    margin-top: 32px;
     width: 100%;
     color: #f0f8ff;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
+    margin-top: 10px;
+}
+#form-delete button[type="submit"] {
+    background-color: rgb(240, 60, 60);
+    float: right;
+    width: 45%;
+
+}
+#form-put button[type="submit"] {
+    background-color: var(--primary-color);
+    float: left;
+    width: 45%;
 }

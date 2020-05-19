@@ -4,7 +4,7 @@
       "id": "2",
       "avatar_url": "https://github.com/settings/profile",
       "name": "Evandro ",
-      "birth": 484444800000,
+      "birth": null,
       "degree": "Ensino Supeior Completo",
       "classes": "PRESENCIAL",
       "services": "Fisica, Matemática",
@@ -31,12 +31,12 @@
       "created_at": 1589055586519
     },
     {
-      "id": 4,
+      "id": "4",
       "avatar_url": "https://github.com/settings/profile",
-      "name": "Evandro Pereira Gibicoski",
-      "birth": 496800000000,
-      "degree": "medio",
-      "classes": "PRESENCIAL",
+      "name": "Evandro ",
+      "birth": 480902400000,
+      "degree": "",
+      "classes": "À DISTÂNCIA",
       "services": "Matematica, historia, fisica",
       "created_at": 1589126844469
     },
