@@ -10,7 +10,7 @@
      Desafio 4-5
 </h3>
 
-1 - Trabalhando com o method-override dentro do projeto e subscrevendo o métodos ``post`` ou ``get`` no form do html:
+1 - Trabalhando com o method-override dentro do projeto e subscrevendo o métodos ``post`` ou ``get`` no ``form`` do **html**:
 
   *Instalando a **lib** method-override no projeto:* ``npm install method-override``<br />
   *Importando a **lib** para o arquivo server:* ``const methodOverride = require('method-override')``<br />
