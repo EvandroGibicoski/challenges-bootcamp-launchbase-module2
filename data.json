@@ -1,36 +1,6 @@
 {
   "teachers": [
     {
-      "id": "2",
-      "avatar_url": "https://github.com/settings/profile",
-      "name": "Evandro ",
-      "birth": null,
-      "degree": "Ensino Supeior Completo",
-      "classes": "PRESENCIAL",
-      "services": "Fisica, Matemática",
-      "created_at": 1588985274259
-    },
-    {
-      "id": 2,
-      "avatar_url": "https://google.com",
-      "name": "Evandro Pereira Gibicoski",
-      "birth": 1588723200000,
-      "degree": "superior",
-      "classes": "À DISTÂNCIA",
-      "services": "Matematica, historia. fisica",
-      "created_at": 1588989247919
-    },
-    {
-      "id": 3,
-      "avatar_url": "https://github.com/settings/profile",
-      "name": "Evandro Pereira Gibicoski",
-      "birth": 476755200000,
-      "degree": "superior",
-      "classes": "À DISTÂNCIA",
-      "services": "Matematica, historia, fisica",
-      "created_at": 1589055586519
-    },
-    {
       "id": "4",
       "avatar_url": "https://github.com/settings/profile",
       "name": "Evandro ",
