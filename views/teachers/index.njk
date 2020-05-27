@@ -3,46 +3,27 @@
  {% block head %} <link rel="stylesheet" href="/style.css">  {% endblock head %} 
 
 {% block content %}
-    <div class="card">
-        <section 
-        class="avatar"
-        style="background: url(https://source.unsplash.com/collection/8491653/300x400) no-repeat center center / cover ">
-        </section>
-
-        <section class="details">
-            <h3>Detalhes</h3>
-
-            <div class="item">
-                <div>Professor</div>
-                <div>Carlos Danillo</div>
-            </div>
-
-            <div class="item">
-                <div>Idade</div>
-                <div>39 Anos</div>
-            </div>
-
-            <div class="item">
-                <div>Grau de Escolaridade</div>
-                <div>Mestrado</div>
-            </div>
-
-            <div class="item">
-                <div>Tipo de Aula</div>
-                <div>À distância</div>
-            </div>
-
-            <div class="item">
-                <div>Acompanhamento</div>
-                <div>Matemática e Física</div>
-            </div>
-
-            <div class="item">
-                <div>Desde</div>
-                <div>22/02/2015</div>
-            </div>
-
-        </section>
+    <div class="card table-container">
+        <a href="/teachers/create">Novo Professor</a>
+        <table width="100%">
+            <thead>
+                <tr>
+                    <th>Professor</th>
+                    <th>Área de Atuação</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>  
+            <tbody>
+            {% for teacher in teachers %}
+                    <tr>
+                        <td>
+                        <span style="background-image: url({{teacher.avatar_url}})"></span>
+                        {{teacher.name}}</td>
+                        <td>{{teacher.services}}</td>
+                        <td><a href="http:/teachers/{{teacher.id}}">Ver</a></td>
+                    </tr>
+             {% endfor %}
+            </tbody>
+        </table>
     </div>
-    
 {% endblock content %}

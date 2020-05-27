@@ -5,24 +5,24 @@
 {% block content %}
 
 <div class="card">
-    
     <section 
         class="avatar"
         style="background: url(https://source.unsplash.com/collection/8491653/300x400) no-repeat center center / cover ">
     </section>
 
     <section class="details">
-       
-            <h3>Editar Professor</h3>
 
-        {% include "teachers/fields.njk" %}
+       <form id="form-put" method="POST" action="/teachers?_method=PUT">
+                <h3>Editar Professor</h3>
 
-         <form id="form-put" method="POST" action="/teachers?_method=PUT">
-            <input 
-                type="hidden" 
-                name="id"
-                value="{{teacher.id}}">
-                <button type="submit">Salvar</button>
+            {% include "teachers/fields.njk" %}
+
+            
+                <input 
+                    type="hidden" 
+                    name="id"
+                    value="{{teacher.id}}">
+                    <button type="submit">Editar</button>
             
         </form>
         

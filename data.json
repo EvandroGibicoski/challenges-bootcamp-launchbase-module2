@@ -1,74 +1,24 @@
 {
   "teachers": [
     {
-      "id": "4",
-      "avatar_url": "https://github.com/settings/profile",
-      "name": "Evandro ",
-      "birth": 480902400000,
-      "degree": "",
-      "classes": "À DISTÂNCIA",
-      "services": "Matematica, historia, fisica",
-      "created_at": 1589126844469
-    },
-    {
-      "id": 5,
-      "avatar_url": "https://github.com/settings/profile",
-      "name": "Carlos",
-      "birth": 476064000000,
-      "degree": "superior",
-      "classes": "PRESENCIAL",
-      "services": "Fisica",
-      "created_at": 1589127495552
-    },
-    {
-      "id": 6,
-      "avatar_url": "https://google.com/teste",
-      "name": "Evandro Gibicoski",
-      "birth": 511660800000,
+      "id": 1,
+      "avatar_url": "https://images.unsplash.com/photo-1587613754760-cd9a285831b3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80",
+      "name": "Sandra",
+      "birth": 287020800000,
       "degree": "mestre",
       "classes": "PRESENCIAL",
-      "services": "Fisica",
-      "created_at": 1589129741908
+      "services": "Matematica, Física",
+      "created_at": 1590609164625
     },
     {
-      "id": 7,
-      "avatar_url": "https://github.com/settings/profile",
-      "name": "Evandro ",
-      "birth": 1589846400000,
-      "degree": "doutor",
+      "id": 2,
+      "avatar_url": "https://images.unsplash.com/photo-1587613756197-11742e6b42ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80",
+      "name": "Karolinne Silva",
+      "birth": 614649600000,
+      "degree": "superior",
       "classes": "PRESENCIAL",
-      "services": "Matematica",
-      "created_at": 1589130610869
-    },
-    {
-      "id": 8,
-      "avatar_url": "https://google.com",
-      "name": "Evandro Pereira Gibicoski",
-      "birth": 1588723200000,
-      "degree": "Ensino Supeior Completo",
-      "classes": "À DISTÂNCIA",
-      "services": "Matematica, historia. fisica",
-      "created_at": 1589659630875
-    },
-    {
-      "id": 9,
-      "avatar_url": "https://google.com",
-      "name": "Evandro Pereira ",
-      "birth": 1588723200000,
-      "degree": "Ensino Supeior Completo",
-      "classes": "À DISTÂNCIA",
-      "services": "Matematica, historia. fisica",
-      "created_at": 1589659649915
-    },
-    {
-      "id": 10,
-      "avatar_url": "https://google.com",
-      "name": "Evandro Pereira",
-      "birth": 1588723200000,
-      "degree": "Ensino Supeior Completo",
-      "classes": "À DISTÂNCIA",
-      "services": "Matematica, historia. fisica",
-      "created_at": 1589659677104
+      "services": "Computação, Física",
+      "created_at": 1590615205478
     }
   ]
 }
