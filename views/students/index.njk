@@ -4,7 +4,7 @@
 
 {% block content %}
     <div class="card table-container">
-        <a href="/teachers/create">Novo Professor</a>
+        <a href="/students/create">Novo Professor</a>
         <table width="100%">
             <thead>
                 <tr>
@@ -17,7 +17,7 @@
             {% for teacher in teachers %}
                     <tr>
                         <td>
-                        <span style="background-image: url({{teacher.avatar_url}})"></span>
+                        <span style="background-image: url({{student.avatar_url}})"></span>
                         {{teacher.name}}</td>
                         <td>{{teacher.services}}</td>
                         <td><a href="http:/teachers/{{teacher.id}}">Ver</a></td>

@@ -7,33 +7,35 @@
 <div class="card">
     <section 
         class="avatar"
-        style="background: url(https://source.unsplash.com/collection/8491653/300x400) no-repeat center center / cover ">
+        style="background: url({{student.avatar_url}}) no-repeat center center / cover ">
     </section>
 
     <section class="details">
 
-       <form id="form-put" method="POST" action="/teachers?_method=PUT">
-                <h3>Editar Professor</h3>
+       <form id="form-put" method="POST" action="/students?_method=PUT">
+                <h3>Editar Estudante</h3>
 
-            {% include "teachers/fields.njk" %}
+            {% include "students/fields.njk" %}
 
             
                 <input 
                     type="hidden" 
                     name="id"
-                    value="{{teacher.id}}">
-                    <button type="submit">Editar</button>
+                    value="{{student.id}}">
+                    <button type="submit">Salvar</button>
             
         </form>
         
-        <form id="form-delete" method="POST" action="/teachers?_method=DELETE">
+        <form id="form-delete" method="POST" action="/students?_method=DELETE">
             <input 
                 type="hidden" 
                 name="id"
-                value="{{ teacher.id }}">
+                value="{{student.id}}">
                 <button type="submit">Deletar</button>
         </form>
 
+        {% block confirm %}    {% endblock %}
+        
     </section>
            
 </div>

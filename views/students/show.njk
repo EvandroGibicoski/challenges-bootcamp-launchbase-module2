@@ -13,38 +13,29 @@
             <h3>Detalhes</h3>
 
             <div class="item">
-                <div>Professor</div>
-                <div>{{ teacher.name}}</div>
+                <div>Nome</div>
+                <div>{{student.name}}</div>
             </div>
 
             <div class="item">
-                <div>Data de Nascimento</div>
-                <div>{{ teacher.age}}</div>
+                <div>Idade</div>
+                <div>{{student.birth}}</div>
             </div>
 
             <div class="item">
-                <div>Grau de Escolaridade</div>
-                <div>
-                    <select id="options" name="degree">
-                        <option   value="{{teacher.degree}}">{{teacher.degree}}</option>
-                    </select>
-                </div>
+                <div>Email</div>
+                <div>{{student.email}}</div>
             </div>
-
             <div class="item">
-                <div>Tipo de Aula</div>
-                <div>{{"PRESENCIAL" if teacher.classes == "PRESENCIAL" else "À DISTÂNCIA"}}</div>
+                <div>Ano Escolar</div>
+                <div>{{student.scholarity}}</div>
             </div>
-
             <div class="item">
-                <div>Área de Atuação</div>
-                <div>{{teacher.services}}</div>
+                <div>Carga Horária Semanal</div>
+                <div>{{student.durationClass}}</div>
             <div>
-            <div class="item">
-                <div>Desde</div>
-                <div>{{teacher.created_at}}</div>
-            </div>
-            <a href="/teachers/{{ teacher.id }}/edit"><button type="submit">Editar</button></a>
+           
+            <a href="/students/{{student.id}}/edit"><button type="submit">Editar</button></a>
         </section>
     </div>
     
