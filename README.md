@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="Launchbase" src="https://github.com/gibifyOfficial/School-Manager/blob/master/public/assets/school-manager.svg" />
+    <img alt="Launchbase" src="https://github.com/gibifyOfficial/School-Manager/blob/master/public/assets/school-manager.svg" width="800px"/>
 </h1>
 
 <h3 align="center">
