@@ -2,25 +2,25 @@
     <img alt="Launchbase" src="https://github.com/gibifyOfficial/School-Manager/blob/master/public/assets/school-manager.svg" width="800px"/>
 </h1>
 
-<h3 align="center">
-     :rocket: challenge from bootcamp launchbase
-</h3>
-
-<h3 align="center">
-     Desafio 4-5
-</h3>
-
-1 - Trabalhando com o method-override dentro do projeto e subscrevendo o métodos ``post`` ou ``get`` no ``form`` do **html**:
-
-  *Instalando a **lib** method-override no projeto:* ``npm install method-override``<br />
-  *Importando a **lib** para o arquivo server:* ``const methodOverride = require('method-override')``<br />
-  *Configurando a **lib** no server:* ``server.use(methodOverride('_method')) `` **OBS: deixar essa linha antes da linha da configuração das rotas**``server.use(routes)``.<br />
-
-  2 - Subscrevendo o verbo ``PUT`` usando a **lib** method-override dentro do html:
-
-  *Dentro da **tag**``form`` subscreve a rota* ``action="/teachers?_method=PUT"``, **OBS: ``?_method=PUT`` é uma "query string"**.<br />
-
-  3 - Subscrevendo o verbo ``DELETE`` usando a **lib** method-override dentro do html:
-
-*Dentro da **tag**``form`` subscreve a rota* ``action="/teachers?_method=DELETE"``, **OBS: ``?_method=DELETE`` é uma "query string"**.<br />
-
+ ## Nome do Projeto:
+ # School Manager
+ ## Descrição do Projeto:
+ #### Este Projeto é um site para gerenciamento de escolas, onde Professores poderão fazer seus cadastros com todos seus dados e inserir quais matérias irão lecionar. Os alunos também porerão fazer seus cadastros, inserindo qual o tipo de matéria que queiram fazer.
+ ## Sobre o desenvolvimento do Projeto:
+ #### Este projeto são etapas de um desafio que foi desenvolvido durante o Bootcamp [launchbase](https://rocketseat.com.br/launchbase) da [RocketSeat](https://rocketseat.com.br), ministrado pelo instrutor [Mayk Brito](https://github.com/maykbrito).
+ ## Tecnologias usadas no Projeto:
+ * [NodeJS](https://nodejs.org/en/docs/)
+ * [Npm](https://www.npmjs.com/get-npm)
+ * [Npm-Run-All](https://www.npmjs.com/package/npm-run-all)
+ * [ExpressJS](https://expressjs.com/)
+ * [Nodemon](https://nodemon.io/)
+ * [Nunjucks](https://mozilla.github.io/nunjucks/templating.html)
+ * [Method-Override](https://www.npmjs.com/package/method-override)
+ * [PostgreSQL](https://www.postgresql.org/)
+ * [Pg](https://www.npmjs.com/package/pg)
+ * [JavaScript](https://www.javascript.com/)
+ * [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
+ * [CSS3](https://developer.mozilla.org/en-US/docs/Archive/CSS3)
+ 
+ ## LICENSE
+ [MIT](https://github.com/gibifyOfficial/Ecoleta/blob/master/LICENSE)
