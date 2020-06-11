@@ -1,0 +1,90 @@
+
+            <div class="item">
+                <div>Avatar URL</div>
+                <div>
+                    <input 
+                    type="url"
+                    name="avatar_url"
+                    placeholder="Digite a url de sua foto, por favor!"
+                    value="{{student.avatar_url}}"
+                    
+                    >
+                </div>
+            </div>
+
+            <div class="item">
+                <div>Nome</div>
+                <div>
+                    <input 
+                    type="text"
+                    name="name"
+                    placeholder="Digite seu nome completo, por favor!"
+                    value="{{student.name}}"
+                    >
+                </div>
+            </div>
+
+            <div class="item">
+                <div>Data de Nascimento</div>
+                <div>
+                <input 
+                type="date"
+                name="birth"
+                value="{{student.birth}}"
+                >
+                </div>
+            </div>
+
+            <div class="item">
+                <div>Email</div>
+                <div>
+                <input 
+                type="email"
+                name="email"
+                value="{{student.email}}"
+                placeholder="Digite seu email, por favor!"
+                >
+                </div>
+            </div>
+
+            <div class="item">
+                <div>Ano Escolar</div>
+                <div>
+                    <select name="scholarity">
+                        <option value="5º Ensino Fundamental"
+                        {% if student.scholarity == "5º Ensino Fundamental" %}selected
+                        {% endif %}>5º Ensino Fundamental</option>
+                        <option value="6º Ensino Fundamental"
+                        {% if student.scholarity == "6º Ensino Fundamental" %}selected
+                        {% endif %}>6º Ensino Fundamental</option>
+                        <option value="7º Ensino Fundamental"
+                        {% if student.scholarity == "7º Ensino Fundamental" %}selected
+                        {% endif %}>7º Ensino Fundamental</option>
+                        <option value="8º Ensino Fundamental"
+                        {% if student.scholarity == "8º Ensino Fundamental" %}selected
+                        {% endif %}>8º Ensino Fundamental</option>
+                        <option value="1º Ensino Médio"
+                        {% if student.scholarity == "1º Ensino Médio" %}selected
+                        {% endif %}>1º Ensino Médio</option>
+                        <option value="2º Ensino Médio"
+                        {% if student.scholarity == "2º Ensino Médio" %}selected
+                        {% endif %}>2º Ensino Médio</option>
+                        <option value="3º Ensino Médio"
+                        {% if student.scholarity == "3º Ensino Médio" %}selected    
+                        {% endif %}>3º Ensino Médio</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="item">
+                <div>Carga Horária Semanal</div>
+                <div>
+                    <input 
+                    type="number" 
+                    name="durationClass"
+                    value="{{student.durationClass}}"
+                    placeholder="Digite sua carga horário, por favor!">
+                </div>
+            </div>
+
+

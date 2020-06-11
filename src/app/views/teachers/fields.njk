@@ -1,0 +1,79 @@
+
+            <div class="item">
+                <div>Avatar URL</div>
+                <div>
+                    <input 
+                    type="url"
+                    name="avatar_url"
+                    value="{{teacher.avatar_url}}"
+                    
+                    >
+                </div>
+            </div>
+
+            <div class="item">
+                <div>Professor</div>
+                <div>
+                    <input 
+                    type="text"
+                    name="name"
+                    value="{{teacher.name}}"
+                    >
+                </div>
+            </div>
+
+            <div class="item">
+                <div>Data de Nascimento</div>
+                <div>
+                <input 
+                type="date"
+                name="birth"
+                value="{{teacher.birth}}"
+                >
+                </div>
+            </div>
+
+            <div class="item">
+                <div>Grau de Escolaridade</div>
+                <div>
+                    <select id="options" name="degree">
+                        <option   value="{{teacher.degree}}">{{teacher.degree}}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="item">
+                <div>Tipo de Aula</div>
+                <div>
+                <span>
+                    <input 
+                        type="radio" 
+                        name="classes" 
+                        value="PRESENCIAL" {% if teacher.classes == "PRESENCIAL" %}
+                        checked
+                        {% endif %}>PRESENCIAL
+                </span>
+                <span>
+                    <input 
+                    type="radio" 
+                    name="classes" 
+                    value="À DISTÂNCIA" 
+                    {% if teacher.classes == "À DISTÂNCIA" %}
+                    checked
+                    {% endif %}>À DISTÂNCIA
+                </span>
+                </div>
+            </div>
+
+            <div class="item">
+                <div>Área de Atuação</div>
+                    <div>
+                        <input 
+                        type="text" 
+                        name="services"
+                        value="{{teacher.services}}"
+                        >
+                    </div>
+            </div>
+
+
