@@ -12,6 +12,7 @@
  * [NodeJS](https://nodejs.org/en/docs/)
  * [Npm](https://www.npmjs.com/get-npm)
  * [Npm-Run-All](https://www.npmjs.com/package/npm-run-all)
+ * [Browser-Sync](https://www.browsersync.io/)
  * [ExpressJS](https://expressjs.com/)
  * [Nodemon](https://nodemon.io/)
  * [Nunjucks](https://mozilla.github.io/nunjucks/templating.html)
