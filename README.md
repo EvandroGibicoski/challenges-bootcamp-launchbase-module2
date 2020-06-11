@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="Launchbase" src="https://storage.googleapis.com/golden-wind/bootcamp-launchbase/logo.png" width="400px" />
+    <img alt="Launchbase" src="https://github.com/gibifyOfficial/School-Manager/blob/master/public/assets/school-manager.svg" />
 </h1>
 
 <h3 align="center">
