@@ -48,7 +48,7 @@
                 <span>
                     <input 
                         type="radio" 
-                        name="classes" 
+                        name="class_type" 
                         value="PRESENCIAL" {% if teacher.classes == "PRESENCIAL" %}
                         checked
                         {% endif %}>PRESENCIAL
@@ -56,7 +56,7 @@
                 <span>
                     <input 
                     type="radio" 
-                    name="classes" 
+                    name="class_type" 
                     value="À DISTÂNCIA" 
                     {% if teacher.classes == "À DISTÂNCIA" %}
                     checked
@@ -70,7 +70,7 @@
                     <div>
                         <input 
                         type="text" 
-                        name="services"
+                        name="subject_taught"
                         value="{{teacher.services}}"
                         >
                     </div>

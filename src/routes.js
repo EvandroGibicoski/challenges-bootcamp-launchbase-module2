@@ -1,11 +1,7 @@
 const express = require('express');
 const routes =  express.Router();
-const teachers = require('/app/controllers/teachers'); 
+const teachers = require('./app/controllers/teachers'); 
 const students = require('./app/controllers/students');
-
-routes.get("/", function(req, res) {
-    return res.redirect("/teachers")
-})
 
 routes.get("/teachers", teachers.index)
 routes.get("/teachers/create", teachers.create)

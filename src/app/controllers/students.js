@@ -1,28 +1,24 @@
 const { age, date, grade } = require('../../lib/utils')
+const Student = require('../models/Student');
 
 module.exports = {
     index(req, res) {
-        return res.render("students/index");
+        Student.all(function(students) {
+            return res.render("students/index", { students });
+        });
     },
     create(req, res) {
         return res.render("students/create");
     },
     show(req, res) {
-        const { id } = req.params;
+        Student.find(req.params.id, function(student) {
+            if(!student)
+            return res.send("Student not found!");
+            
+            student.birth = date(student.birth).birthDay;
 
-        const foundStudent = data.students.find(function (student) {
-            return student.id == id;
-        })
-        if (!foundStudent)
-            return res.send("Student not found");
-
-        const student = {
-            ...foundStudent,
-            birth: date(foundStudent.birth).birthDay,
-            scholarity: grade(foundStudent.scholarity)
-        }
-
-        return res.render("students/show", { student });
+            return res.render("students/show", { student });
+        });
     },
     post(req, res) {
         const keys = Object.keys(req.body);
@@ -32,85 +28,36 @@ module.exports = {
                 return res.send("Please, fill all fields!");
             };
         };
-
-        birth = Date.parse(req.body.birth)
-        let id = 1;
-        const lastStudent = data.students[data.students.length - 1];
-        if (lastStudent) {
-            id = lastStudent.id + 1;
-        };
-
-        data.students.push({
-            id,
-            ...req.body,
-            birth,
-        });
-
-        fs.writeFile("data.json", JSON.stringify(data, null, 2), function (err) {
-            if (err) return res.send("Write file error");
-            return res.redirect("/students");
-        });
+        
+        
     },
     edit(req, res) {
-        const { id } = req.params;
+        Student.find(req.params.id, function(student) {
+            if(!student)
+            return res.send("Student not found!");
+            
+            student.birth = date(student.birth).iso;
 
-        const foundStudent = data.students.find(function (student) {
-            return student.id == id;
+            return res.render("students/edit", { student });
         });
-        if (!foundStudent)
-            return res.send("Student not found");
-
-        const student = {
-            ...foundStudent,
-            birth: date(foundStudent.birth).br,
-
-        };
-        return res.render("students/edit", { student });
     },
     put(req, res) {
-        const { id } = req.body;
-        let index = 0;
+        const keys = Object.keys(req.body);
 
-        const foundStudent = data.students.find(function (student, foundIndex) {
-            if (id == student.id) {
-                index = foundIndex;
-                return true
+        for (key of keys) {
+            if (req.body[key] == "") {
+                return res.send("Please, fill all fields!");
             };
-
-        });
-
-        if (!foundStudent)
-            return res.send("Student not found!");
-
-        const student = {
-            ...foundStudent,
-            ...req.body,
-            birth: Date.parse(req.body.birth),
-            id: Number(req.body.id),
         };
 
-        data.students[index] = student;
-
-        fs.writeFile("data.json", JSON.stringify(data, null, 2), function (err) {
-            if (err) return res.send("Write file error!");
-
-            return res.redirect(`/students/${id}`);
+        Student.update(req.body, function() {
+            return res.redirect(`/students/${req.body.id}`);
         });
     },
     delete(req, res) {
-        const { id } = req.body;
-
-        const filteredstudents = data.students.filter(function (teacher) {
-            return teacher.id != id
-        });
-
-        data.students = filteredstudents
-
-        fs.writeFile("data.json", JSON.stringify(data, null, 2), function (err) {
-            if (err)
-                return res.send("Write file error!");
+       Student.delete(req.body.id, function() {
             return res.redirect("/students");
-        });
+       });
     }
 
 };
