@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="Launchbase" src="https://github.com/gibifyOfficial/School-Manager/blob/master/public/assets/school-manager.svg" width="800px"/>
+    <img alt="Launchbase" src="https://github.com/gibifyOfficial/School-Manager/blob/master/public/assets/school-manager.png" width="800px"/>
 </h1>
 
  ## Nome do Projeto:
@@ -12,6 +12,7 @@
  * [NodeJS](https://nodejs.org/en/docs/)
  * [Npm](https://www.npmjs.com/get-npm)
  * [Npm-Run-All](https://www.npmjs.com/package/npm-run-all)
+ * [Browser-Sync](https://www.browsersync.io/)
  * [ExpressJS](https://expressjs.com/)
  * [Nodemon](https://nodemon.io/)
  * [Nunjucks](https://mozilla.github.io/nunjucks/templating.html)
@@ -23,4 +24,4 @@
  * [CSS3](https://developer.mozilla.org/en-US/docs/Archive/CSS3)
  
  ## LICENSE
- [MIT]()
+ [MIT](https://github.com/gibifyOfficial/School-Manager/blob/master/LICENSE)
