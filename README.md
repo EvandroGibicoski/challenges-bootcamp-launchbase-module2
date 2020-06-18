@@ -18,6 +18,7 @@
  * [Nunjucks](https://mozilla.github.io/nunjucks/templating.html)
  * [Method-Override](https://www.npmjs.com/package/method-override)
  * [PostgreSQL](https://www.postgresql.org/)
+ * [Postbird](https://www.electronjs.org/docs)
  * [Pg](https://www.npmjs.com/package/pg)
  * [JavaScript](https://www.javascript.com/)
  * [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
