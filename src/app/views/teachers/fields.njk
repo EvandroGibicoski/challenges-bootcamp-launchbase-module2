@@ -34,10 +34,24 @@
             </div>
 
             <div class="item">
-                <div>Grau de Escolaridade</div>
+                <div>Graduação</div>
                 <div>
-                    <select id="options" name="degree">
-                        <option   value="{{teacher.degree}}">{{teacher.degree}}</option>
+                    <select name="degree">
+                        <option value="Tecnólogo"
+                        {% if teacher.degree == "Tecnólogo" %}selected
+                        {% endif %}>Tecnólogo</option>
+                        <option value="Bacharel"
+                        {% if teacher.degree == "Bacharel" %}selected
+                        {% endif %}>Bacharel</option>
+                        <option value="Pós Graduação"
+                        {% if teacher.degree =="Pós Graduação" %}selected
+                        {% endif %}>Pós Graduação </option>
+                        <option value="Mestrado"
+                        {% if teacher.degree == "Mestrado" %}selected
+                        {% endif %}>Mestrado</option>
+                        <option value="Doutorado"
+                        {% if teacher.degree == "Doutorado" %}selected
+                        {% endif %}>Doutorado</option>
                     </select>
                 </div>
             </div>
@@ -49,7 +63,7 @@
                     <input 
                         type="radio" 
                         name="class_type" 
-                        value="PRESENCIAL" {% if teacher.classes == "PRESENCIAL" %}
+                        value="PRESENCIAL" {% if teacher.class_type == "PRESENCIAL" %}
                         checked
                         {% endif %}>PRESENCIAL
                 </span>
@@ -58,7 +72,7 @@
                     type="radio" 
                     name="class_type" 
                     value="À DISTÂNCIA" 
-                    {% if teacher.classes == "À DISTÂNCIA" %}
+                    {% if teacher.class_type == "À DISTÂNCIA" %}
                     checked
                     {% endif %}>À DISTÂNCIA
                 </span>
@@ -71,7 +85,7 @@
                         <input 
                         type="text" 
                         name="subject_taught"
-                        value="{{teacher.services}}"
+                        value="{{teacher.subject_taught}}"
                         >
                     </div>
             </div>

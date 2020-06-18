@@ -6,7 +6,7 @@
     <div class="card">
         <section 
         class="avatar"
-        style="background: url(https://source.unsplash.com/collection/8491653/300x400) no-repeat center center / cover ">
+        style="background: url({{teacher.avatar_url}}/300x400) no-repeat center center / cover ">
         </section>
 
         <section class="details">
@@ -19,26 +19,22 @@
 
             <div class="item">
                 <div>Data de Nascimento</div>
-                <div>{{ teacher.birth}}</div>
+                <div>{{teacher.age}}</div>
             </div>
 
             <div class="item">
-                <div>Grau de Escolaridade</div>
-                <div>
-                    <select id="options" name="degree">
-                        <option   value="{{teacher.degree}}">{{teacher.degree}}</option>
-                    </select>
-                </div>
+                <div>Graduação</div>
+                <div>{{teacher.degree}}</div>
             </div>
 
             <div class="item">
                 <div>Tipo de Aula</div>
-                <div>{{"PRESENCIAL" if teacher.classes == "PRESENCIAL" else "À DISTÂNCIA"}}</div>
+                <div>{{"PRESENCIAL" if teacher.class_type == "PRESENCIAL" else "À DISTÂNCIA"}}</div>
             </div>
 
             <div class="item">
                 <div>Área de Atuação</div>
-                <div>{{teacher.services}}</div>
+                <div>{{teacher.subject_taught}}</div>
             <div>
             <div class="item">
                 <div>Desde</div>

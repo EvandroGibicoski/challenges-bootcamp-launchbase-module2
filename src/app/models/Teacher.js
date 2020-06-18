@@ -21,25 +21,23 @@ module.exports = {
                 INSERT INTO teachers (
                     avatar_url,
                     name,
-                    gender,
                     birth,
                     degree,
                     class_type,
                     subject_taught,
                     created_at
-                ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8 )
+                ) VALUES ($1, $2, $3, $4, $5, $6, $7)
                 RETURNING id
         `
 
-        const value = [
+        const values = [
             data.avatar_url,
             data.name,
-            data.gender,
-            data(data.birth).iso,
+            date(data.birth).iso,
             data.degree,
             data.class_type,
             data.subject_taught,
-            data(Date.now()).iso
+            date(Date.now()).iso,
         ]
 
         db.query(query, values, function(err, results) {
@@ -72,17 +70,15 @@ module.exports = {
         SET
         avatar_url=($1),
         name=($2),
-        gender=($3),
-        birth=($4),
-        degree=($5),
-        class_type=($6),
-        subject_taught=($7),
-        WHERE id = $8
+        birth=($3),
+        degree=($4),
+        class_type=($5),
+        subject_taught=($6),
+        WHERE id = $7
         `
         const value = [
             data.avatar_url,
             data.name,
-            data.gender,
             data(data.birth).iso,
             data.degree,
             data.class_type,

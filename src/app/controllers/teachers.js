@@ -56,12 +56,14 @@ module.exports = {
                 return res.send("Please, fill all fields!");
             };
         };
+        
+        return res.render("teachers/show")
 
 
     },
     delete(req, res) {
         Teacher.delete(req.body.id), function() {
-            return res.send(`/teahcers/${req.body.id}`);
+            return res.send(`/teachers/${req.body.id}`);
         };
     },
 };  

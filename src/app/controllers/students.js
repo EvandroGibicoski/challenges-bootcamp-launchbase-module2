@@ -29,6 +29,9 @@ module.exports = {
             };
         };
         
+        Student.create(req.body, function(student) {
+            return res.redirect(`/students/${student.id}`);
+        });
         
     },
     edit(req, res) {
@@ -37,6 +40,10 @@ module.exports = {
             return res.send("Student not found!");
             
             student.birth = date(student.birth).iso;
+
+            Student.teachersSelectOptions(function(options) {
+                return res.send("students/edit", { teachersSelectOptions: options });
+            });
 
             return res.render("students/edit", { student });
         });

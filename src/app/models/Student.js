@@ -32,7 +32,7 @@ module.exports = {
         const value = [
             data.avatar_url,
             data.name,
-            data(data.birth).iso,
+            date(data.birth).iso,
             data.email,
             data.scholarity,
             data.duration_class,
@@ -73,11 +73,12 @@ module.exports = {
         scholarity=($5),
         duratio_class=($6),
         WHERE id = $8
+
         `
         const value = [
             data.avatar_url,
             data.name,
-            data(data.birth).iso,
+            date(data.birth).iso,
             data.email,
             data.scholarity,
             data.duration_class,
@@ -105,5 +106,13 @@ module.exports = {
         );
 
         callback();
+    },
+    teachersSelectOptions(callback){
+        db.query(`SELECT name, id FROM teachers`, function(err, results) {
+            if(err) throw `Database Error! ${err}`;
+
+        callback(results.rows);
+
+        });
     },
 }; 

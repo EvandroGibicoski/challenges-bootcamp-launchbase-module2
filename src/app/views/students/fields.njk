@@ -86,5 +86,15 @@
                     placeholder="Digite sua carga horário, por favor!">
                 </div>
             </div>
+            <div class="item">
+                <div>Professor</div>
+                <div>
+                    <select name="teacher">
+                        <option value="{{teacher.id}}"
+                        {% if student.teacher_id == teacher-id %}selected
+                        {% endif %}>{{teacheriname}}</option>
+                    </select>
+                </div>
+            </div>
 
 
