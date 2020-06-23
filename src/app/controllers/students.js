@@ -8,7 +8,9 @@ module.exports = {
         });
     },
     create(req, res) {
-        return res.render("students/create");
+        Student.teachersSelectOptions(function(options) {
+            return res.render("students/create", { teacherOptions: options });
+        });
     },
     show(req, res) {
         Student.find(req.params.id, function(student) {
@@ -16,7 +18,7 @@ module.exports = {
             return res.send("Student not found!");
             
             student.birth = date(student.birth).birthDay;
-
+        
             return res.render("students/show", { student });
         });
     },
@@ -42,10 +44,8 @@ module.exports = {
             student.birth = date(student.birth).iso;
 
             Student.teachersSelectOptions(function(options) {
-                return res.send("students/edit", { teachersSelectOptions: options });
+                return res.render("students/edit", { teacherOptions: options });
             });
-
-            return res.render("students/edit", { student });
         });
     },
     put(req, res) {
