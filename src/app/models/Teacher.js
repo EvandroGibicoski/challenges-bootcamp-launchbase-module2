@@ -5,9 +5,10 @@ module.exports = {
     all(callback) {
         db.query(
             `
-                SELECT * 
+                SELECT teachers.*, count(students) AS total_students
                 FROM  teachers
-                ORDER BY name ASC
+                LEFT JOIN students ON (teachers.id = students.teacher_id)
+                GROUP BY teachers.id
             `, function(err, results) {
                 if(err) 
                 throw `Database Error! ${err}`;
@@ -37,16 +38,16 @@ module.exports = {
             data.degree,
             data.class_type,
             data.subject_taught,
-            date(Date.now()).iso,
+            date(Date.now()).iso
         ]
 
         db.query(query, values, function(err, results) {
-            if(err) 
-            throw `Database Error! ${err}`;
+                if(err) 
+                throw `Database Error! ${err}`;
 
-            callback (results.rows[0]);   
-        }
-    ); 
+                callback (results.rows[0]);   
+            }
+        ); 
             
     },
     find(id, callback) {
@@ -61,6 +62,23 @@ module.exports = {
 
                 callback(results.rows[0]);
             }
+        );
+    },
+    findBy(filter, callback) {
+        db.query(
+            `
+                SELECT teachers.*, count(students) AS total_students
+                FROM teachers
+                LEFT JOIN students ON (teachers.id = students.teacher_id)
+                WHERE teachers.name ILIKE '%${filter}%'
+                OR  teachers.subject_taught ILIKE '%${filter}%'
+                GROUP BY teachers.id
+            `, function(err, results) {
+                if(err) 
+                throw `Database Error! ${err}`;
+
+                callback(results.rows);
+            },
         );
     },
     update(data, callback) {
@@ -79,7 +97,7 @@ module.exports = {
         const value = [
             data.avatar_url,
             data.name,
-            data(data.birth).iso,
+            date(data.birth).iso,
             data.degree,
             data.class_type,
             data.subject_taught,
@@ -107,5 +125,41 @@ module.exports = {
         );
 
         callback();
+    },
+    paginate(params) {
+        const { filter, limit, offset, callback } = params;
+
+        let query = "",
+            filterQuery = "",
+            totalQuery = `(
+                SELECT count(*) FROM teachers
+            ) AS total`
+
+            if( filter ) {
+                filterQuery  = `
+                    WHERE teachers.name ILIKE '%${filter}%'
+                    OR teachers.subject_taught ILIKE '%${filter}%'
+                    `
+    
+                totalQuery = `
+                (
+                    SELECT count(*) FROM teachers
+                    ${filterQuery}
+                ) AS total`
+            };
+
+            query = `
+            SELECT teachers.*, ${totalQuery}, count(students) AS total_students 
+            FROM teachers
+            LEFT JOIN students ON (teachers.id = students.teacher_id)
+            ${filterQuery}
+            GROUP BY teachers.id LIMIT $1 OFFSET $2
+        `
+
+        db.query(query, [limit, offset], function(err, results) {
+            if(err) throw `Database Error! ${err}`
+
+            callback(results.rows);
+        });
     },
 }; 

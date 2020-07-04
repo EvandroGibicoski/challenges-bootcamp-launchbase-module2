@@ -4,9 +4,29 @@ const Teacher = require('../models/Teacher');
 
 module.exports = {
     index(req, res) {
-        Teacher.all(function(teachers) {
-            return res.render("teachers/index", { teachers });
-        });
+        let { filter, page, limit } = req.query;
+
+        page = page || 1
+        limit = limit || 2
+        let offset = limit * (page - 1);
+
+        const params = {
+            filter,
+            page,
+            limit,
+            offset,
+            callback(teachers) {
+
+                const pagination = {
+                    total: Math.ceil(teachers[0].total / limit),
+                    page
+                };
+
+                return res.render("teachers/index", { teachers, pagination, filter });
+            }
+        };
+
+        Teacher.paginate(params);   
     },
     create(req, res) {
         return res.render("teachers/create");
@@ -24,20 +44,6 @@ module.exports = {
             return res.render("teachers/show", { teacher });
         });
     },
-    post(req, res) {
-        const keys = Object.keys(req.body);
-
-        for (key of keys) {
-            if (req.body[key] == "") {
-                return res.send("Please, fill all fields!");
-            };
-        };
-
-            Teacher.create(req.body, function(teacher){
-                return res.send(`/teachers/${teacher.id}`);
-            });
-
-    },
     edit(req, res) {
         Teacher.find(req.params.id, function(teacher) {
             if(!teacher)
@@ -48,6 +54,20 @@ module.exports = {
             return res.render("teachers/edit", { teacher });
         });
     },
+    post(req, res) {
+        const keys = Object.keys(req.body);
+
+        for (key of keys) {
+            if (req.body[key] == "") {
+                return res.send("Please, fill all fields!");
+            };
+        };
+
+            Teacher.create(req.body, function(teacher){
+                return res.redirect(`/teachers/${teacher.id}`);
+            });
+
+    },
     put(req, res) {
         const keys = Object.keys(req.body);
 
@@ -57,13 +77,13 @@ module.exports = {
             };
         };
         
-        return res.render("teachers/show")
-
-
+        Teacher.update(req.body, function() {
+            return res.redirect(`/teachers/${req.body.id}`);
+        });
     },
     delete(req, res) {
         Teacher.delete(req.body.id), function() {
-            return res.send(`/teachers/${req.body.id}`);
+            return res.redirect("/teachers");
         };
     },
 };  

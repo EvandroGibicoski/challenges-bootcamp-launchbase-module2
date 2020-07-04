@@ -32,10 +32,11 @@ module.exports = {
 
     graduation(value) {
             switch(value) {
-                case("medio"): return "Ensino Médio Completo";
-                case("superior"): return "Ensino Supeior Completo";
-                case("mestre"): return "Mestrado";
-                case("doutor"): return "Doutorado";
+                case("Tecnólogo"): return "Tecnólogo";
+                case("Bacharel"): return "Bacharel";
+                case("Pós Graduação"): return "Pós Graduação";
+                case("Mestrado"): return "Mestrado";
+                case("Doutorado"): return "Doutorado";
         }
     },
 

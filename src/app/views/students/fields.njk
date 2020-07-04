@@ -90,9 +90,13 @@
                 <div>Professor</div>
                 <div>
                     <select name="teacher">
-                        <option value="{{teacher.id}}"
-                        {% if student.teacher_id == teacher-id %}selected
-                        {% endif %}>{{teacheriname}}</option>
+                        {% for teacher in teacherOptions %}
+                            <option value="{{teacher.id}}"
+                            {% if student.teacher_id == teacher.id %}selected
+                            {% endif %}>{{teacher.name}}
+                            </option>
+                        {% endfor %}
+
                     </select>
                 </div>
             </div>
